@@ -1,0 +1,46 @@
+import java.util.*;
+public class LinkedList{
+     public static void main(String args[]) {
+ 
+         LinkedList<String> linkedlist = new LinkedList<String>();
+ 
+         //add agraga un elemento en la lista
+         linkedlist.add("Item1");
+         linkedlist.add("Item5");
+         linkedlist.add("Item3");
+         linkedlist.add("Item6");
+         linkedlist.add("Item2");
+ 
+         //Despliega el contenido  
+         System.out.println("Cotenido Linked List: " +linkedlist);
+ 
+         //agrega al prinicipio y final 
+         linkedlist.addFirst("Primer Elemento");
+         linkedlist.addLast("Último Elemento");
+         System.out.println("LinkedList despues de agrar elementos: " +linkedlist);
+          
+         System.out.println("tamaño de linkedlist: " + linkedlist.size() );
+          
+         if (linkedlist.contains("Item10"))
+             System.out.println("El Item10 está en el linkedlist");
+         else
+             System.out.println("El Item10 no existe en el linkedlist");
+ 
+         //Obtención y recuperacion de elementos
+         Object firstvar = linkedlist.get(0);
+         System.out.println("Primer elemento: " +firstvar);
+         linkedlist.set(0, "Cambiar el primer elemento");
+         Object firstvar2 = linkedlist.get(0);
+         System.out.println("Primer elemento despues de actualiza por el método  set: " + firstvar2);
+ 
+         //Borrar el primer y último elemento
+         linkedlist.removeFirst();
+         linkedlist.removeLast();
+         System.out.println("LinkedList despues de borrae el primer y último elemento: " +linkedlist);
+ 
+         // Agrarar en un posición y eliminar por posición
+         linkedlist.add(0, "Nuevo elemento");
+         linkedlist.remove(2);
+         System.out.println("Final del contenido: " +linkedlist); 
+     }
+}
